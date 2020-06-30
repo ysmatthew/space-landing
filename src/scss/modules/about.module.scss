@@ -1,0 +1,100 @@
+@import '../styles.scss';
+
+.container {
+    padding: 80px 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2, p{
+        text-align: -webkit-center;
+        text-align: center;
+        color: $fontLight;
+    }
+
+    h2{
+      padding-top: 20px;
+    }
+    p{
+        margin: 20px 0;
+    }
+
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+        margin: 50px 0;
+       
+        .wrap{
+            width: 320px;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 50px 0;
+            margin-left: auto;
+            margin-right: auto;
+
+            .icon{
+                max-width: 100px;
+                width: 100%;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+            }
+
+            .iconTitle{
+                font-size: 1.3em;
+                color: $fontLight;
+                margin: 10px 0;
+            }
+            
+            .iconContent{
+                font-size: 1em;
+                font-weight: 300;
+                color: $fontLight;
+            }
+        }
+    }
+
+    .moonContainer{
+       width: 100%;
+       height: auto;
+        max-width: 640px;
+        margin: 80px 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        
+        &::before{
+            content: "";
+            width: 500px;
+            height: 500px;
+            display: block;
+            position: absolute;
+            top: -75px;
+            left: -100px;
+            z-index: -1;
+            background:
+            linear-gradient(90deg, $primaryDark (22px - 1px), transparent 1%) center,
+            linear-gradient($primaryDark (22px - 1px), transparent 1%) center,
+            $fontLight;
+            background-size: 22px 22px;
+            width: 100%;
+        }
+
+        .moonImg{
+            @include drop-shadow;
+        }
+    }
+  
+}
+
+@media screen and (min-width: $screenmd){
+    .container{
+        h2{
+            font-size: 1.7em;
+        }
+    }
+}

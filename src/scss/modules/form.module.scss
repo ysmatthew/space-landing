@@ -1,0 +1,68 @@
+@import '../styles.scss';
+
+.container{
+    max-width: 350px;
+    @include box-shadow;
+    padding: 5px;
+    text-align: -webkit-center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    background-color: $secondaryDark;
+    border-radius: 3px;
+    position: relative;
+
+    &::before{
+        content: "";
+        width: 100px;
+        height: 100px;
+        display: block;
+        position: absolute;
+        top: -45px;
+        left: -45px;
+        border: 5px $secondaryLight solid;
+        z-index: -1;
+    }
+
+    h1{
+        margin: 20px 0;
+        font-size: 1em;
+        color: $fontLight;
+    }
+
+        form{
+            max-width: 250px;
+            align-self: center;
+            height: auto;
+    
+        .input{
+            max-width: 230px;
+            width: 100%;
+            height: 45px;
+            background-color: $primaryLight;
+            color: $fontLight;
+            border: none;
+            border-radius: 3px;
+            padding: 5px;
+            margin: 5px 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .errorMsg{
+            font-size: .9em;
+            font-weight: 100;
+            color: $primaryLight;
+        }
+        
+        button{
+            @include primary-btn;
+            padding: 15px 35px;
+            border: none;
+            margin: 50px 0;
+        } 
+    }
+}

@@ -1,0 +1,41 @@
+@import '../styles.scss';
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 5px;
+    
+    img{
+        max-width: 100%;
+        width: 70px;
+    }
+
+    .btn{
+        text-decoration: none;
+        color: $primaryLight;
+        font-weight: bold;;
+        border: 2px $primaryLight solid;
+        padding: 12px 20px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        background: $primaryBright;
+        display: inline-block;
+        background: linear-gradient(to right, $primaryBright 0%, $primaryBright 50%, #ffffff00 50%, #ffffff00 100%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        transition: background-position 0.3s ease;
+        -webkit-transition: background-position 0.3s ease;
+        cursor: pointer;
+
+        &:hover{
+            background-position: 0 0;
+            color: white;
+            border: 2px $primaryBright solid;
+        }
+    }
+}

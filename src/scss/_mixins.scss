@@ -1,0 +1,53 @@
+// Box shadow
+
+@mixin box-shadow{
+    box-shadow: 
+    0 5px 10px rgba(0, 0, 0, 0.178),
+    0 7px 10px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 10px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 50px 40px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.178),
+    0 7px 10px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 10px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 50px 40px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 
+    0 5px 10px rgba(0, 0, 0, 0.178),
+    0 7px 10px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 10px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 50px 40px rgba(0, 0, 0, 0.12);
+}
+
+@mixin drop-shadow{
+    filter: 
+    drop-shadow(
+    0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+// Button
+
+@mixin primary-btn{
+    background-color: $primaryBright;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 25px;
+    font-weight: 700;
+    border-radius: 3px;
+    transition: all 150ms linear;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus{
+        background-color: darken($primaryBright, 10%);
+        transition: all 300ms linear;
+        color: lighten(#fff, 50%);
+    }
+}
